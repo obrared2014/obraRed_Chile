@@ -18,7 +18,7 @@ if(!isset($_SESSION['usuario'])) {
     <script src="bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
-    <div class="container" style="padding-top: 1em;">
+    <div class="container" style="padding-top: 1em;"><!-- barra de navegacion -->
         <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex3-collapse">
