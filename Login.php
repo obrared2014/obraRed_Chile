@@ -17,12 +17,12 @@
                         <span class="sr-only">Navegador</span>
                         <span class="glyphicon glyphicon-chevron-down"></span><!-- icono para opciones en dispositvos mobiles-->
                     </button>
-                    <a href="home.php"><img src="img/LOGO_3.png" width="150px"/></a>
+                    <a href="Index.php"><img src="img/LOGO_3.png" width="150px"/></a>
                 </div>
                 <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="home.php" role="button" class="dropdown-toggle">Inicio</a>
+                            <a href="Index.php" role="button" class="dropdown-toggle">Inicio</a>
                         </li>
                         <li class="dropdown">
                             <a id="servicios" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
