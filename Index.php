@@ -21,11 +21,11 @@
                 <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="home.php" role="button" class="dropdown-toggle">Inicio</a>
+                            <a href="Index.php" role="button" class="dropdown-toggle">Inicio</a>
                         </li>
                         <li class="dropdown">
                             <a id="servicios" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="servicios">
                                 <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Visión</a></li>
                                 <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Misión</a></li>
                             </ul>
@@ -39,8 +39,8 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li id="fat-menu" class="dropdown">
-                            <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                            <a href="#" id="sesion" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="sesion">
                                 <li class="dropdown">
                                     <a role="menuitem" tabindex="-1" href="Login.php">Iniciar Sesión</a>
                                 </li>
