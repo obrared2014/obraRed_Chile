@@ -17,17 +17,17 @@ $usuario = $_POST["admin"];
 $password = $_POST["password_usuario"];
 $result = mysql_query("SELECT * FROM tbl_login WHERE login_usuario = '$usuario'");
  
-//Validamos si el nombre del administrador y contrase�a
+//Validamos si el nombre del administrador y contraseña
 if($row = mysql_fetch_array($result)){     
     if($row["login_password"] == $password){
         session_start();
         $_SESSION['usuario'] = $usuario;  
-        header("Location:index.php");  
+        header("Location:Index.php");  
     }else{
 ?>
     <script languaje="javascript">
         alert("Contraseña Incorrecta");
-        location.href = "login.php";
+        location.href = "Login.php";
     </script>
 <?php
     }
@@ -36,7 +36,7 @@ else{
     ?>
         <script languaje="javascript">
             alert("El nombre de usuario es incorrecto!");
-            location.href = "login.php";
+            location.href = "Login.php";
         </script>
     <?php
 }
