@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default" role="navigation"><!-- menu principal-->
             <div class="container-fluid">
                 <div class="navbar-header"><!-- opcion para dispositivos de baja resolucion -->
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse"><!-- una vez colapsado el menu aparece esta opcion-->
                         <span class="sr-only">Navegador</span>
                         <span class="glyphicon glyphicon-chevron-down"></span><!-- icono para opciones en dispositvos mobiles-->
                     </button>
@@ -27,30 +27,37 @@
                         <li class="dropdown">
                             <a id="servicios" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                                <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Visión</a></li>
-                                <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Misión</a></li>
+                                <li class="dropdown">
+                                    <a href="Vision.php" role="button" class="dropdown-toggle">Visión</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="Mision.php" role="button" class="dropdown-toggle">Misión</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle">Quienes Somos</a>
+                            <a href="Quienes_Somos.php" role="button" class="dropdown-toggle">Quienes Somos</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle">Contacto</a>
+                            <a href="Contacto.php" role="button" class="dropdown-toggle">Contacto</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li id="fat-menu" class="dropdown">
                             <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="sesion">
                                 <li class="dropdown">
-                                    <a role="menuitem" tabindex="-1" href="#">Registrarse</a>
+                                    <a role="menuitem" tabindex="-1" href="Login.php">Iniciar Sesión</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a role="menuitem" tabindex="-1" href="Registro_Usuario.php">Registrarse</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </div><!-- /.nav-collapse -->
+                </div><!-- fin menu principal-->
             </div><!-- /.container-fluid -->
-        </nav> <!-- /Barra de navegacion -->
+        </nav> <!-- fin menu principal-->
         <div class="row">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">&nbsp;</div>
         </div>
