@@ -13,7 +13,7 @@ $link = mysql_connect($servidor, $usuario, $pass);
             echo '<script language="javascript">alert("Error al tratar de conectar con MySQL");</script>'; 
     }//conexion a la base de datos con errores filtrados.  
     
-$usuario = $_POST["admin"];
+$usuario = $_POST["user"];
 $password = $_POST["password_usuario"];
 $result = mysql_query("SELECT * FROM tbl_login WHERE login_usuario = '$usuario'");
  

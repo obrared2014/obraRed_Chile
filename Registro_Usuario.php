@@ -25,8 +25,8 @@
                             <a href="Index.php" role="button" class="dropdown-toggle">Inicio</a>
                         </li>
                         <li class="dropdown">
-                            <a id="servicios" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="servicios">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
                                 <li class="dropdown"><a href="Vision.php" role="button" class="dropdown-toggle">Visión</a></li>
                                 <li class="dropdown"><a href="Mision.php" role="button" class="dropdown-toggle">Misión</a></li>
                             </ul>
@@ -38,23 +38,110 @@
                             <a href="Contacto.php" role="button" class="dropdown-toggle">Contacto</a>
                        </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li id="fat-menu" class="dropdown">
-                            <a href="#" id="sesion" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="sesion">
-                                <li class="dropdown">
-                                    <a role="menuitem" tabindex="-1" href="Login.php">Iniciar Sesión</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a role="menuitem" tabindex="-1" href="Registro_Usuario.php">Registrarse</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <?php
+                        session_start();
+                        if(isset($_SESSION['usuario'])){
+                            echo '<ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectad como '.$_SESSION['usuario'].'<b class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Perfil</a></li>
+                                    <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
+                                </ul>
+                            </li>
+                         </ul>';
+                        }
+                        else{
+                    ?>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="dropdown"><a href="Login.php" role="button" class="dropdown-toggle">Iniciar Sesión</a></li>
+                                    <li class="dropdown"><a href="Registro_Usuario.php" role="button" class="dropdown-toggle">Registrarse</a></li>
+                                </ul>
+                            </li>
+                         </ul>
+                    <?php } ?>
                 </div><!-- nav-collapse -->
             </div><!-- container-fluid -->
         </nav><!-- fin menu principal-->
-    </div> <!-- /container principal-->
-    
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!-- comienzo carousel--> 
+            <ol class="carousel-indicators"> <!--Indicadores--> 
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol> <!--fin indicadores -->
+            <div class="carousel-inner"><!-- Slides--> 
+                <div class="item active"> <!--imagenes 1500 x 500-->
+                    <img src="img/img_carousel_001.jpg" alt="0">
+                    <div class="carousel-caption">
+                        <h3>Con unas simples medidas de tu obra</h3>
+                        <p>Para obtener lo necesario...</p>
+                    </div>    
+                </div>
+                <div class="item">
+                      <img src="img/img_carousel_002.jpg" alt="1">
+                      <div class="carousel-caption">
+                        <h3>Levantar una contrucción</h3>
+                        <p>con obraRed es mucho mas facil</p>
+                    </div>
+                </div>
+                <div class="item">
+                      <img src="img/img_carousel_003.jpg" alt="2">
+                      <div class="carousel-caption">
+                        <h3>Solo compra lo que utlizaras...</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img_carousel_004.jpg" alt="3">
+                    <div class="carousel-caption">
+                        <h3>Comienza a levantar tu obra mucho mas rapido</h3>
+                    </div>
+                </div>
+            </div><!--Fin slides -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><!-- Control izquierda -->
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><!-- Control derecha -->
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div><!-- fin carousel -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+                <h1>Registro de Usuario</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4"></div>
+            <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4">
+                <form class="form" action="ValidarRegistro.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="user" placeholder="Usuario" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password_usuario" placeholder="Contraseña" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="ap_paterno" placeholder="Apellido Paterno" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="ap_materno" placeholder="Apellido Materno" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4"></div>
+        </div>
+    </div>
 </body>
 </html>

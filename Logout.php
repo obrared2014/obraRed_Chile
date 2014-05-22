@@ -5,6 +5,6 @@
  $_SESSION = array();
  //Destruir Sesión
  session_destroy();
- //Redireccionar a login.php
- header("location: login.php");
+ //Redireccionar a Index.php
+ header("location: Index.php");
 ?>
