@@ -66,15 +66,15 @@
                 </div><!-- nav-collapse -->
             </div><!-- container-fluid -->
         </nav><!-- fin menu principal-->
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!-- comienzo carousel--> 
-            <ol class="carousel-indicators"> <!--Indicadores--> 
+<!--        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> comienzo carousel 
+            <ol class="carousel-indicators"> Indicadores 
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol> <!--fin indicadores -->
-            <div class="carousel-inner"><!-- Slides--> 
-                <div class="item active"> <!--imagenes 1500 x 500-->
+            </ol> fin indicadores 
+            <div class="carousel-inner"> Slides 
+                <div class="item active"> imagenes 1500 x 500
                     <img src="img/img_carousel_001.jpg" alt="0">
                     <div class="carousel-caption">
                         <h3>Con unas simples medidas de tu obra</h3>
@@ -100,14 +100,14 @@
                         <h3>Comienza a levantar tu obra mucho mas rapido</h3>
                     </div>
                 </div>
-            </div><!--Fin slides -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><!-- Control izquierda -->
+            </div>Fin slides 
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> Control izquierda 
               <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><!-- Control derecha -->
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> Control derecha 
               <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
-        </div><!-- fin carousel -->
+        </div> fin carousel -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="page-header">
                 <h1>Registro de Usuario</h1>
@@ -117,6 +117,9 @@
             <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4"></div>
             <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4">
                 <form class="form" action="ValidarRegistro.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="rut" placeholder="Rut" required="true">
+                    </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="user" placeholder="Usuario" required="true">
                     </div>
@@ -134,6 +137,15 @@
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Email" required="true">
+                    </div>                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="actividad" placeholder="Actividad" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="telefono" placeholder="Fono de contacto" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="direccion" placeholder="Direccion" required="true">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar">
