@@ -25,17 +25,21 @@
                             <a href="Index.php" role="button" class="dropdown-toggle">Inicio</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="dropdown"><a href="Vision.php" role="button" class="dropdown-toggle">Visión</a></li>
-                                <li class="dropdown"><a href="Mision.php" role="button" class="dropdown-toggle">Misión</a></li>
-                            </ul>
+                            <a href="#" role="button" class="dropdown-toggle">Servicios</a>
                         </li>
                         <li class="dropdown">
-                            <a href="Quienes_Somos.php" role="button" class="dropdown-toggle">Quienes Somos</a>
+                            <a href="#" role="button" class="dropdown-toggle"  data-toggle="dropdown">Nuestra Empresa<b class="caret"></b></a>
+                           <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown"><a href="Quienes_Somos.php" role="button" class="dropdown-toggle">Quienes Somos</a></li>
+                                <li class="dropdown"><a href="Vision.php" role="button" class="dropdown-toggle">Visión</a></li>
+                                <li class="dropdown"><a href="Mision.php" role="button" class="dropdown-toggle">Misión</a></li>
+                            </ul>                 
                         </li>
                         <li class="dropdown">
                             <a href="Contacto.php" role="button" class="dropdown-toggle">Contacto</a>
+                       </li>
+                       <li name="presupuesto" id="presupuesto" class="dropdown" style="display:none">
+                            <a href="Presupuesto.php" role="button" class="dropdown-toggle">Crear Presupuesto</a>
                        </li>
                     </ul>
                     <?php
@@ -46,14 +50,18 @@
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como '.$_SESSION['usuario'].'<b class="caret"></b></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Perfil</a></li>
-                                    <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
+                                    <li class="dropdown""><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
                                 </ul>
                             </li>
-                         </ul>';
+                         </ul> 
+                         <script type="text/javascript">
+                            document.getElementById("presupuesto").style.display="block";
+                         </script>';
+
                         }
                         else{
                     ?>
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right" on>
                             <li class="dropdown">
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
                                 <ul class="dropdown-menu" role="menu">
