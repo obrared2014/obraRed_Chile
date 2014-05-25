@@ -1,6 +1,8 @@
-<!doctype html>
-<!--index.php -->
-<html lang="es">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<!--presupuesto.php -->    
 <head>
   <meta charset="UTF-8">
     <title></title>
@@ -26,21 +28,17 @@
                             <a href="Index.php" role="button" class="dropdown-toggle">Inicio</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle">Servicios</a>
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Servicios<b class="caret"></b></a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle"  data-toggle="dropdown">Nuestra Empresa<b class="caret"></b></a>
-                           <ul class="dropdown-menu" role="menu">
-                                <li class="dropdown"><a href="Quienes_Somos.php" role="button" class="dropdown-toggle">Quienes Somos</a></li>
+                            <a href="Quienes_Somos.php" role="button" class="dropdown-toggle">Quienes Somos</a>
+                            <ul class="dropdown-menu" role="menu">
                                 <li class="dropdown"><a href="Vision.php" role="button" class="dropdown-toggle">Visión</a></li>
                                 <li class="dropdown"><a href="Mision.php" role="button" class="dropdown-toggle">Misión</a></li>
-                            </ul>                 
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a href="Contacto.php" role="button" class="dropdown-toggle">Contacto</a>
-                       </li>
-                       <li name="presupuesto" id="presupuesto" class="dropdown" style="display:none">
-                            <a href="Presupuesto.php" role="button" class="dropdown-toggle">Crear Presupuesto</a>
                        </li>
                     </ul>
                     <?php
@@ -51,18 +49,14 @@
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como '.$_SESSION['usuario'].'<b class="caret"></b></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Perfil</a></li>
-                                    <li class="dropdown""><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
+                                    <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
                                 </ul>
                             </li>
-                         </ul> 
-                         <script type="text/javascript">
-                            document.getElementById("presupuesto").style.display="block";
-                         </script>';
-
+                         </ul>';
                         }
                         else{
                     ?>
-                        <ul class="nav navbar-nav navbar-right" on>
+                        <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -75,48 +69,50 @@
                 </div><!-- nav-collapse -->
             </div><!-- container-fluid -->
         </nav><!-- fin menu principal-->
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!-- comienzo carousel -->
-            <ol class="carousel-indicators"><!-- Indicadores -->
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol><!-- fin indicadores -->
-            <div class="carousel-inner"><!-- Slides -->
-                <div class="item active"><!-- imagenes 1500 x 500 -->
-                    <img src="img/img_carousel_001.jpg" alt="0">
-                    <div class="carousel-caption">
-                        <h3>Con unas simples medidas de tu obra</h3>
-                        <p>Para obtener lo necesario...</p>
-                    </div>    
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+                <h1>Presupuesto de Proyecto</h1>
+            </div>
+        </div>
+        <form class="form" action="" method="POST">
+            <div class="row">    
+                <div class="col-md-4">
+                    <h3>Tipo de Proyecto</h3>
+                    <select id="tipo" name="tipo" class="form-control" onchange="tipo_proyecto()">
+                        <option value="">Seleccione proyecto</option>
+                        <option value="1">Pandereta</option>
+                        <option value="2">Radier</option>
+                    </select>
                 </div>
-                <div class="item">
-                      <img src="img/img_carousel_002.jpg" alt="1">
-                      <div class="carousel-caption">
-                        <h3>Levantar una contrucción</h3>
-                        <p>con obraRed es mucho mas facil</p>
-                    </div>
-                </div>
-                <div class="item">
-                      <img src="img/img_carousel_003.jpg" alt="2">
-                      <div class="carousel-caption">
-                        <h3>Solo compra lo que utlizaras...</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/img_carousel_004.jpg" alt="3">
-                    <div class="carousel-caption">
-                        <h3>Comienza a levantar tu obra mucho mas rapido</h3>
-                    </div>
-                </div>
-            </div><!--Fin slides -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><!-- Control izquierda -->
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><!-- Control derecha -->
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div><!-- fin carousel -->
-    </div> <!-- /container principal-->  
-</body>
+            </div>        
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4"></div>
+                <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4">
 
+
+                        <div id="prueba" name="prueba" class="form-group">
+                            <input type="text" class="form-control" name="user" placeholder="Usuario" required="true">
+                        </div>
+
+                </div>
+            <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4"></div>
+            </div>
+        </form>
+    </div>
+</body>
+<script language="javascript">
+    function tipo_proyecto(){
+        
+        var a=0;
+        a=document.getElementById("tipo").value;
+        
+        if(a==1){
+//            alert(a);
+            document.getElementById("prueba").style.display="none";
+        }else{
+            document.getElementById("prueba").style.display="block";
+        }
+        
+    }
+</script>
+</html>
