@@ -11,7 +11,7 @@ if($error==1){
             </script>';        
         }else{
             $usuario = $_POST["user"];
-            $password = $_POST["password_usuario"];
+            $password = (md5($_POST["password_usuario"]));
             $result = mysql_query("SELECT * FROM tbl_login WHERE login_usuario = '$usuario'");
             //Validamos si el nombre del administrador y contraseña
             if($row = mysql_fetch_array($result)){     

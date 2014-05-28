@@ -15,7 +15,7 @@ if($error==1){
         }else{
             $rut = $_POST["rut"];    
             $usuario = $_POST["user"];
-            $password = $_POST["password_usuario"];
+            $password = (md5($_POST["password_usuario"]));
             $nombre = $_POST["nombre"];
             $ap_paterno = $_POST["ap_paterno"];
             $ap_materno = $_POST["ap_materno"];
