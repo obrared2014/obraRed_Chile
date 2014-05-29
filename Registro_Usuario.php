@@ -6,10 +6,21 @@
 <head>
   <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css"/>
+    <script src="bootstrap/js/validar_formulario.js"></script> 
     <script src="bootstrap/js/jQuery.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>    
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/jQueryRut.js"></script>
+    <script src="bootstrap/js/jquery.Rut.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#rut').Rut({ 
+            on_error: function(){ alert('Favor ingrese un rut correcto'); } 
+        });
+        $("#content > ul").tabs();
+        });
+</script>
 </head>
 <body>
     <div class="container">
@@ -77,48 +88,6 @@
                 </div><!-- nav-collapse -->
             </div><!-- container-fluid -->
         </nav><!-- fin menu principal-->
-<!--        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> comienzo carousel 
-            <ol class="carousel-indicators"> Indicadores 
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol> fin indicadores 
-            <div class="carousel-inner"> Slides 
-                <div class="item active"> imagenes 1500 x 500
-                    <img src="img/img_carousel_001.jpg" alt="0">
-                    <div class="carousel-caption">
-                        <h3>Con unas simples medidas de tu obra</h3>
-                        <p>Para obtener lo necesario...</p>
-                    </div>    
-                </div>
-                <div class="item">
-                      <img src="img/img_carousel_002.jpg" alt="1">
-                      <div class="carousel-caption">
-                        <h3>Levantar una contrucción</h3>
-                        <p>con obraRed es mucho mas facil</p>
-                    </div>
-                </div>
-                <div class="item">
-                      <img src="img/img_carousel_003.jpg" alt="2">
-                      <div class="carousel-caption">
-                        <h3>Solo compra lo que utlizaras...</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/img_carousel_004.jpg" alt="3">
-                    <div class="carousel-caption">
-                        <h3>Comienza a levantar tu obra mucho mas rapido</h3>
-                    </div>
-                </div>
-            </div>Fin slides 
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> Control izquierda 
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> Control derecha 
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div> fin carousel -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="page-header">
                 <h1>Registro de Usuario</h1>
@@ -127,9 +96,9 @@
         <div class="row">
             <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4"></div>
             <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4">
-                <form class="form" action="ValidarRegistro.php" method="POST">
+                <form class="form" action="ValidarRegistro.php" name="registro_usuario" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="rut" placeholder="Rut" required="true">
+                        <input type="text" class="form-control" id="rut" name="rut" placeholder="Rut" required="true">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="user" placeholder="Usuario" required="true">
@@ -138,19 +107,19 @@
                         <input type="password" class="form-control" name="password_usuario" placeholder="Contraseña" required="true">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="true">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="true" onkeypress="ValidaSoloLetras()">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="ap_paterno" placeholder="Apellido Paterno" required="true">
+                        <input type="text" class="form-control" name="ap_paterno" placeholder="Apellido Paterno" required="true" onkeypress="ValidaSoloLetras()">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="ap_materno" placeholder="Apellido Materno" required="true">
+                        <input type="text" class="form-control" name="ap_materno" placeholder="Apellido Materno" required="true" onkeypress="ValidaSoloLetras()">
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Email" required="true">
                     </div>                    
                     <div class="form-group">
-                        <input type="text" class="form-control" name="actividad" placeholder="Actividad" required="true">
+                        <input type="text" class="form-control" name="actividad" placeholder="Actividad" required="true" onkeypress="ValidaSoloLetras()">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="telefono" placeholder="Fono de contacto" required="true">
