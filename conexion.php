@@ -1,6 +1,9 @@
 <?php 
+$server='localhost';
+$user='root';
+$pass='root';
 
-$con=mysql_connect("localhost","root","root");  
+$con=mysql_connect($server,$user,$pass);  
 if($con){
     $database=mysql_select_db("db_obrared");
     $error=1;//Variable que permite controlar si está conectado o no el valor 1 indica que está conectado
