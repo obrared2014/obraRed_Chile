@@ -6,7 +6,7 @@
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
     </ol><!-- fin indicadores -->
     <div class="carousel-inner"><!-- Slides -->
         <div class="item active"><!-- imagenes 1500 x 500 -->
