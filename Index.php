@@ -15,7 +15,7 @@
     <div class="container">
         <?php 
             include 'cabecera.php';
-//            include './carousel.php';
+            include './carousel.php';
         ?>
         <hr/>
     </div> <!-- /container principal-->  
