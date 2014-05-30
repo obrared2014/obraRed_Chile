@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
     <script src="bootstrap/js/jQuery.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>    
+    <script src="bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
     <div class="container">
@@ -17,7 +17,7 @@
             include './cabecera.php';
             include './carousel.php';
         ?>
-        
+        <hr/>
     </div> <!-- /container principal-->  
 </body>
 
