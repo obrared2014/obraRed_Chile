@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <nav class="navbar navbar-default" role="navigation"><!-- menu principal-->
     <div class="container-fluid">
         <div class="navbar-header"><!-- opcion para dispositivos de baja resolucion -->
