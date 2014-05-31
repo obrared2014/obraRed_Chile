@@ -10,7 +10,7 @@ if($error==1){
         if(!$database){
            echo '<script languaje="javascript">
                 alert("Error al seleccionar la Base de Datos");
-                location.href = "Registro_Usuario.php";
+                location.href = "Index.php?sec=Registro";
             </script>';        
         }else{
             $rut = $_POST["rut"];    
@@ -29,14 +29,14 @@ if($error==1){
 
                   echo ' <script languaje="javascript">
                         alert("Error al ingresar los datos");
-                        location.href = "Registro_Usuario.php";
+                        location.href = "Index.php?sec=Registro";
                     </script>';
 
             }else{
                     echo '
                     <script languaje="javascript">
                         alert("Se ingresaron los datos con exito");
-                        location.href = "login.php";
+                        location.href = "Index.php?sec=Login";
                     </script>';
 
             }    
@@ -47,7 +47,7 @@ if($error==1){
 }else{
     echo '<script languaje="javascript">
         alert("Error al intentar conectar a la base de datos!");
-        location.href = "Registro_Usuario.php";        
+        location.href = "Index.php?sec=Registro";        
     </script>';   
 }
 

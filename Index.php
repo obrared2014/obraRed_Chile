@@ -15,9 +15,44 @@
     <div class="container">
         <?php 
             include 'cabecera.php';
-            include './carousel.php';
+//            include './carousel.php';
         ?>
+        <?php 
+            $seccion=filter_input(INPUT_GET, "sec");
+            if(empty($seccion)){
+                $seccion='Inicio';
+            }
+            switch($seccion){
+                case "Inicio":
+                    include 'Carousel.php';
+                    break;
+                case "Servicios":
+                    include 'Servicios.php';
+                    break;
+                case "Nosotros":
+                    include 'Quienes_Somos.php';
+                    break;
+                case "Vision":
+                    include 'Vision.php';
+                    break;
+                case "Mision":
+                    include 'Mision.php';
+                    break;
+                case "Contacto":
+                    include 'Contacto.php';
+                    break;
+                case "Presupuesto":
+                    include 'Presupuesto.php';
+                    break;   
+                case "Login":
+                    include 'Login.php';
+                    break;
+                case "Registro":
+                    include 'Registro_Usuario.php';
+                    break;                
+            }
+        ?>        
         <hr/>
-    </div> <!-- /container principal-->  
+    </div> <!-- /container principal-->
 </body>
 

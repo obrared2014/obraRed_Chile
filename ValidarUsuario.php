@@ -7,7 +7,7 @@ if($error==1){
         if(!$database){
            echo '<script languaje="javascript">
                 alert("Error al seleccionar la Base de Datos");
-                location.href = "Login.php";
+                location.href = "Index.php?sec=Login";
             </script>';        
         }else{
             $usuario = $_POST["user"];
@@ -18,12 +18,12 @@ if($error==1){
                 if($row["login_password"] == $password){
                     session_start();
                     $_SESSION['usuario'] = $usuario;  
-                    header("Location:Index.php");  
+                    header("Location:Index.php?sec=Inicio");  
                 }else{
                     echo '
                 <script languaje="javascript">
                     alert("Contraseña Incorrecta");
-                    location.href = "Login.php";
+                    location.href = "Index.php?sec=Login";
                 </script>';
 
                 }
@@ -31,7 +31,7 @@ if($error==1){
             else{
                 echo '<script languaje="javascript">
                     alert("El nombre de usuario es incorrecto!");
-                    location.href = "Login.php";
+                    location.href = "Index.php?sec=Login";
                 </script>';
             }       
         }
@@ -41,7 +41,7 @@ if($error==1){
 }else{
     echo '<script languaje="javascript">
         alert("Error al intentar conectar a la base de datos!");
-        location.href = "Login.php";
+        location.href = "Index.php?sec=Login";
     </script>';   
 }
 mysql_free_result($result);

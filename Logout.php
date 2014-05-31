@@ -6,5 +6,5 @@
  //Destruir Sesión
  session_destroy();
  //Redireccionar a Index.php
- header("location: Index.php");
+ header("location: Index.php?sec=Inicio");
 ?>
