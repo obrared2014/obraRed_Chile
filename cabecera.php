@@ -13,18 +13,20 @@
                 <li class="dropdown">
                     <a href="?sec=Inicio" role="button" class="dropdown-toggle">Inicio</a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="servicios_logout" style="display: block">
                     <a href="?sec=Servicios" role="button" class="dropdown-toggle">Servicios</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" role="button" class="dropdown-toggle"  data-toggle="dropdown">Nuestra Empresa<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown"><a href="?sec=Nosotros" role="button" class="dropdown-toggle">Quienes Somos</a></li>
+                        <li class="dropdown" id="servicios_login" style="display: none"><a href="?sec=Servicios" role="button" class="dropdown-toggle">Servicios</a></li>
                         <li class="dropdown"><a href="?sec=Vision" role="button" class="dropdown-toggle">Visión</a></li>
                         <li class="dropdown"><a href="?sec=Mision" role="button" class="dropdown-toggle">Misión</a></li>
+                        <li class="dropdown" id="contacto_login" style="display: none"><a href="?sec=Contacto" role="button" class="dropdown-toggle">Contacto</a></li>
                     </ul>                 
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" id="contacto_logout" style="display:block">
                     <a href="?sec=Contacto" role="button" class="dropdown-toggle">Contacto</a>
                </li>
                <li name="presupuesto" id="presupuesto" class="dropdown" style="display:none">
@@ -34,31 +36,34 @@
             <?php
                 session_start();
                 if(isset($_SESSION['usuario'])){
-                    echo '<ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como '.$_SESSION['usuario'].'<b class="caret"></b></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Perfil</a></li>
-                            <li class="dropdown""><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
-                        </ul>
-                    </li>
-                 </ul> 
-                 <script type="text/javascript">
-                    document.getElementById("presupuesto").style.display="block";
-                 </script>';
-
+            ?>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Perfil</a></li>
+                        <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul> 
+            <script type="text/javascript">document.getElementById("presupuesto").style.display="block";</script>
+            <script type="text/javascript">document.getElementById("servicios_logout").style.display="none";</script>
+            <script type="text/javascript">document.getElementById("servicios_login").style.display="block";</script>
+            <script type="text/javascript">document.getElementById("contacto_logout").style.display="none";</script>
+            <script type="text/javascript">document.getElementById("contacto_login").style.display="block";</script>
+            <?php
                 }
                 else{
             ?>
-                <ul class="nav navbar-nav navbar-right" on>
-                    <li class="dropdown">
-                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a href="?sec=Login" role="button" class="dropdown-toggle">Iniciar Sesión</a></li>
-                            <li class="dropdown"><a href="?sec=Registro" role="button" class="dropdown-toggle">Registrarse</a></li>
-                        </ul>
-                    </li>
-                 </ul>
+            <ul class="nav navbar-nav navbar-right" on>
+                <li class="dropdown">
+                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown"><a href="?sec=Login" role="button" class="dropdown-toggle">Iniciar Sesión</a></li>
+                        <li class="dropdown"><a href="?sec=Registro" role="button" class="dropdown-toggle">Registrarse</a></li>
+                    </ul>
+                </li>
+             </ul>
             <?php } ?>
         </div><!-- nav-collapse -->
     </div><!-- container-fluid -->
