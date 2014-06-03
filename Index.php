@@ -15,9 +15,7 @@
     <div class="container">
         <?php 
             include 'cabecera.php';
-//            include './carousel.php';
-        ?>
-        <?php 
+            
             $seccion=filter_input(INPUT_GET, "sec");
             if(empty($seccion)){
                 $seccion='Inicio';
