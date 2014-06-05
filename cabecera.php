@@ -41,7 +41,7 @@
                 <li class="dropdown">
                     <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown"><a href="#" role="button" class="dropdown-toggle">Perfil</a></li>
+                        <li class="dropdown"><a href="?sec=Perfil" role="button" class="dropdown-toggle">Perfil</a></li>
                         <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
                     </ul>
                 </li>

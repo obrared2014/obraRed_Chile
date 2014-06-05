@@ -22,9 +22,9 @@
             </div>
         </div>
         <div class="item">
-              <img src="img/img_carousel_003.jpg" alt="2">
-              <div class="carousel-caption">
-                <h3>Solo compra lo que utlizaras...</h3>
+            <img src="img/img_carousel_003.jpg" alt="2">
+            <div class="carousel-caption">
+                <h3>Solo compra lo que utilizaras...</h3>
             </div>
         </div>
         <div class="item">

@@ -6,8 +6,9 @@
 <head>
   <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="bootstrap/css/footer.css"/>
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
 </head>
@@ -15,7 +16,6 @@
     <div class="container">
         <?php 
             include 'cabecera.php';
-            
             $seccion=filter_input(INPUT_GET, "sec");
             if(empty($seccion)){
                 $seccion='Inicio';
@@ -47,10 +47,13 @@
                     break;
                 case "Registro":
                     include 'Registro_Usuario.php';
-                    break;                
+                    break;
+                case "Perfil":
+                    include 'Perfil.php';
+                    break;         
             }
+            include './footer.php';
         ?>        
-        <hr/>
-    </div> <!-- /container principal-->
+    </div><!-- /container principal-->
 </body>
 
