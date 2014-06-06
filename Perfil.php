@@ -14,11 +14,12 @@
         <h1>Perfil de usuario</h1>
     </div>
     <div class="row">
-            <form class="form" action="" name="perfil_usuario" method="POST">
+        <form class="form" action="ValidarActualizacion.php" name="perfil_usuario" method="POST">
                 <div class="row">
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
                         <div class="form-group">
+                            <input type="text" class="form-control" id="id" name="id" required="true" value="<?php echo $_SESSION['id_persona'] ?>" style="display: none">
                             <input type="text" class="form-control" id="rut" name="rut" required="true" value="<?php echo $_SESSION['rut'] ?>">
                         </div>
                     </div>

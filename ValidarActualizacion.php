@@ -8,9 +8,8 @@ if($error==1){
                 location.href = "Index.php?sec=Registro";
             </script>';        
         }else{
-            $rut = $_POST["rut"];    
-            $usuario = $_POST["user"];
-            $password = (md5($_POST["password_usuario"]));
+            $id = $_POST['id'];
+            $rut = $_POST["rut"];
             $nombre = $_POST["nombre"];
             $ap_paterno = $_POST["ap_paterno"];
             $ap_materno = $_POST["ap_materno"];
@@ -19,21 +18,19 @@ if($error==1){
             $telefono =$_POST["telefono"];
             $direccion =$_POST["direccion"];
 
-            $insertar = mysql_query("call insertar('$rut','$nombre','$ap_paterno','$ap_materno','$email','$actividad','$telefono','$direccion','$usuario','$password')");
-            if(!$insertar){
-
-                  echo ' <script languaje="javascript">
-                        alert("Error al ingresar los datos");
-                        location.href = "Index.php?sec=Registro";
-                    </script>';
+            $update = mysql_query("call actualizar_usuario('$id','$rut','$nombre','$ap_paterno','$ap_materno','$email','$actividad','$telefono','$direccion')");
+            if(!$update){
+                echo ' <script languaje="javascript">
+                    alert("Error al actualizar los datos");
+                    location.href = "Index.php?sec=Registro";
+                </script>';
 
             }else{
                     echo '
                     <script languaje="javascript">
-                        alert("Se ingresaron los datos con exito");
+                        alert("Se actualizaron los datos con exito");
                         location.href = "Index.php?sec=Login";
                     </script>';
-
             }    
         }
     }else{

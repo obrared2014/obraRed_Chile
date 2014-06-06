@@ -13,12 +13,13 @@ if($error==1){
             $usuario = $_POST["user"];
             $password = (md5($_POST["password_usuario"]));
             $result = mysql_query("SELECT * FROM tbl_login WHERE login_usuario = '$usuario'");
-            //Validamos si el nombre del administrador y contraseña
+            //Validamos el nombres usuario y contraseña
             if($row = mysql_fetch_array($result)){
                 $id = $row['id_persona'];
                 $datos = mysql_query("call datos_usuario($id)");
                 if($row = mysql_fetch_array($datos)){ 
                     session_start();
+                    $_SESSION['id_persona'] = $id;
                     $_SESSION['rut'] = $row['rut'];
                     $_SESSION['nombre'] = $row['nombre'];
                     $_SESSION['ap_paterno'] = $row ['ap_paterno'];
@@ -27,7 +28,7 @@ if($error==1){
                     $_SESSION['actividad'] = $row ['actividad'];
                     $_SESSION['telefono'] = $row ['telefono'];
                     $_SESSION['direccion'] = $row ['direccion'];
-                    header("Location:Index.php?sec=Inicio"); 
+                    header("Location:Index.php?sec=Inicio");
                 }
                 else{
                     echo '

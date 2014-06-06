@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="?sec=Inicio" role="button" class="dropdown-toggle">Inicio</a>
+                    <a href="?sec=Inicio" role="button" class="dropdown-toggle"><b class="glyphicon glyphicon-home"></b>&nbsp;Inicio</a>
                 </li>
                 <li class="dropdown" id="servicios_logout" style="display: block">
                     <a href="?sec=Servicios" role="button" class="dropdown-toggle">Servicios</a>
@@ -39,10 +39,10 @@
             ?>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como <?php echo $_SESSION['nombre'] ?> <b class="caret"></b></a>
+                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Bienvenido <?php echo $_SESSION['nombre'].' '.$_SESSION['ap_paterno'] ?> <b class="glyphicon glyphicon-user"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown"><a href="?sec=Perfil" role="button" class="dropdown-toggle">Perfil</a></li>
-                        <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>
+                        <li class="dropdown"><a href="?sec=Perfil" role="button" class="dropdown-toggle"><b class="glyphicon glyphicon-cog"></b>&nbsp;Perfil</a></li>
+                        <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>
                 </li>
             </ul> 
@@ -57,10 +57,10 @@
             ?>
             <ul class="nav navbar-nav navbar-right" on>
                 <li class="dropdown">
-                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión<b class="caret"></b></a>
+                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Inicio de Sesión <b class="glyphicon glyphicon-user"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown"><a href="?sec=Login" role="button" class="dropdown-toggle">Iniciar Sesión</a></li>
-                        <li class="dropdown"><a href="?sec=Registro" role="button" class="dropdown-toggle">Registrarse</a></li>
+                        <li class="dropdown"><a href="?sec=Login" role="button" class="dropdown-toggle"><b class="glyphicon glyphicon-off"></b>&nbsp;Iniciar Sesión</a></li>
+                        <li class="dropdown"><a href="?sec=Registro" role="button" class="dropdown-toggle"><b class="glyphicon glyphicon-pencil"></b>&nbsp;Registrarse</a></li>
                     </ul>
                 </li>
              </ul>

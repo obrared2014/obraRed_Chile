@@ -20,6 +20,17 @@
                 </div>
             </div> 
         </form>
+        <?php
+            if(isset($_SESSION['nombre'])){
+        ?>
+        <div class="form-group" style="display: block">
+            <div class="alert alert-warning">
+                <a href="#" class="alert-link">Favor Ingrese su usuario y contraseña para completar la actualizacion de datos</a>
+            </div>
+        </div>
+        <?php
+            }
+        ?>
     </div>
     <div class="col-xs-0 col-sm-3 col-md-4 col-lg-4">&nbsp;</div>
 </div><!-- Fin login -->
