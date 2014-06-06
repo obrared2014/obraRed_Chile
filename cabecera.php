@@ -35,11 +35,11 @@
             </ul>
             <?php
                 session_start();
-                if(isset($_SESSION['usuario'])){
+                if(isset($_SESSION['nombre'])){
             ?>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
+                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Conectado como <?php echo $_SESSION['nombre'] ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown"><a href="?sec=Perfil" role="button" class="dropdown-toggle">Perfil</a></li>
                         <li class="dropdown"><a href="Logout.php" role="button" class="dropdown-toggle">Cerrar Sesión</a></li>

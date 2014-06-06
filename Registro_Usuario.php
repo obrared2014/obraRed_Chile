@@ -21,7 +21,7 @@
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="rut" name="rut" placeholder="Rut" required="true" maxlength="9">
+                            <input type="text" class="form-control" id="rut" name="rut" placeholder="Rut" required="true">
                         </div>
                     </div>
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-9">&nbsp;</div>

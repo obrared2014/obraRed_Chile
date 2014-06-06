@@ -52,7 +52,7 @@
                     include 'Perfil.php';
                     break;         
             }
-            include './footer.php';
+            include 'footer.php';
         ?>        
     </div><!-- /container principal-->
 </body>

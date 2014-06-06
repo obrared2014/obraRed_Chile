@@ -14,12 +14,22 @@ if($error==1){
             $password = (md5($_POST["password_usuario"]));
             $result = mysql_query("SELECT * FROM tbl_login WHERE login_usuario = '$usuario'");
             //Validamos si el nombre del administrador y contraseña
-            if($row = mysql_fetch_array($result)){     
-                if($row["login_password"] == $password){
+            if($row = mysql_fetch_array($result)){
+                $id = $row['id_persona'];
+                $datos = mysql_query("call datos_usuario($id)");
+                if($row = mysql_fetch_array($datos)){ 
                     session_start();
-                    $_SESSION['usuario'] = $usuario;  
-                    header("Location:Index.php?sec=Inicio");  
-                }else{
+                    $_SESSION['rut'] = $row['rut'];
+                    $_SESSION['nombre'] = $row['nombre'];
+                    $_SESSION['ap_paterno'] = $row ['ap_paterno'];
+                    $_SESSION['ap_materno'] = $row ['ap_materno'];
+                    $_SESSION['email'] = $row ['email'];
+                    $_SESSION['actividad'] = $row ['actividad'];
+                    $_SESSION['telefono'] = $row ['telefono'];
+                    $_SESSION['direccion'] = $row ['direccion'];
+                    header("Location:Index.php?sec=Inicio"); 
+                }
+                else{
                     echo '
                 <script languaje="javascript">
                     alert("Contraseña Incorrecta");
