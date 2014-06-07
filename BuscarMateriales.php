@@ -16,7 +16,7 @@
     <body>
         
         <div class="container">
-            <?php include 'cabecera.php'; ?>
+           
             <div class="page-header">
                 <h1><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Buscar &nbsp;&nbsp;<small>Materiales, Empresas ...</small></h1>
             </div>                
