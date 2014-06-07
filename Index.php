@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="bootstrap/css/footer.css"/>
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    
+
+    
 </head>
 <body>
     <div class="container">
@@ -53,7 +56,7 @@
                     break;         
             }
             include 'footer.php';
-        ?>        
+        ?>
     </div><!-- /container principal-->
 </body>
 
