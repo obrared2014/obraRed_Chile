@@ -1,4 +1,62 @@
 <!-- presupuesto -->
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="page-header">
+            <h1>Generando Presupuesto</h1>
+        </div>
+    </div>   
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"><!-- panel solicitando las medidas de la obra-->
+        <div class="page-header">
+            <div class="panel panel-default">
+                <div class="panel-heading">Medidas de su obra</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas">
+                        <div class="form-group">
+                            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label">Altura</label> 
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> 
+                                <input type="text" class="form-control"  name="altura"/> 
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label">Ancho</label> 
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> 
+                                <input type="text" class="form-control"  name="altura"/> 
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label">Largo</label> 
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> 
+                                <input type="text" class="form-control"  name="altura"/> 
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- fin panel medidas-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="page-header">
+            <div class="panel panel-default">
+                <div class="panel-heading">Zona Geografica de su obra</div>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label">Larco</label> 
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> 
+                                <input type="text" class="form-control"  name="altura"/> 
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <div class="bs-example">
     <div class="btn-group">
