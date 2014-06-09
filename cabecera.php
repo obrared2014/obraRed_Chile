@@ -32,6 +32,9 @@
                <li name="presupuesto" id="presupuesto" class="dropdown" style="display:none">
                     <a href="?sec=Presupuesto" role="button" class="dropdown-toggle">Crear Presupuesto</a>
                </li>
+               <li name="buscar" id="buscar" class="dropdown" style="display:none">
+                    <a href="?sec=Buscar" role="button" class="dropdown-toggle">Buscar</a>
+               </li>
             </ul>
             <?php
                 session_start();
@@ -51,6 +54,7 @@
             <script type="text/javascript">document.getElementById("servicios_login").style.display="block";</script>
             <script type="text/javascript">document.getElementById("contacto_logout").style.display="none";</script>
             <script type="text/javascript">document.getElementById("contacto_login").style.display="block";</script>
+            <script type="text/javascript">document.getElementById("buscar").style.display="block";</script>
             <?php
                 }
                 else{

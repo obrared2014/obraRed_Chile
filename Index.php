@@ -53,7 +53,10 @@
                     break;
                 case "Perfil":
                     include 'Perfil.php';
-                    break;         
+                    break;
+                case "Buscar":
+                    include 'BuscarMateriales.php';
+                    break; 
             }
             include 'footer.php';
         ?>
