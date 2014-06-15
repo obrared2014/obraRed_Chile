@@ -57,6 +57,9 @@
                 case "Buscar":
                     include 'BuscarMateriales.php';
                     break; 
+                case "Agrega_Materiales":
+                    include 'Registro_Materiales.php';
+                    break;                   
             }
             include 'footer.php';
         ?>
