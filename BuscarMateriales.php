@@ -18,58 +18,17 @@
         <div class="container">
            
             <div class="page-header">
-                <h1><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Buscar &nbsp;&nbsp;<small>Materiales, Empresas ...</small></h1>
+                <h4><span class="glyphicon glyphicon-search"></span></h4>
             </div>                
-            <div class="row">
-
-                
+            <div class="row">            
                 <div class="col-lg-4">
-                    <?php include 'MenuBuscar.php'; ?>
+                    <?php include 'MenuBuscar.php'; ?>            
                 </div>                       
                     
                 
                 <div class="col-lg-4">               
-                    <?php 
-                    if($_POST)
-                    {
-                        if(isset($_POST['mat']))
-                        {
-                           $material=$_POST['busq_mat'];               
-                        ?>
-                        <div class="panel panel-primary"><div class="panel-heading">materiales</div><div class="table-responsive"><table class="table table-hover" >
-                        <tr><th class="active">nombre<th>comun<th>ciudad<th>fono</th><th>stock</th></tr>
-                        <?php 
-                        for ($i = 0; $i < 13; $i++) 
-                        {
-                             echo '<tr><td>'.$material.'</td><td>dss</td><td>ssss</td><td>sss<td>' . $i . '</td></tr>';
-                        }   
-                        ?>
-                        </table></div></div>
-                        <?php }?>
-
-                        <?php
-                       if(isset($_POST['emp']))
-                        {
-                           $empresa=$_POST['empresa'];               
-                        ?>
-                        <div class="panel panel-primary"><div class="panel-heading">empresas</div><div class="table-responsive"><table class="table table-hover" >
-                        <tr><th class="active">nombre<th>comun<th>ciudad<th>fono</th><th>stock</th></tr>
-                        <?php 
-                        for ($i = 0; $i < 13; $i++) 
-                        {
-                             echo '<tr><td>'.$empresa.'</td><td>dss</td><td>ssss</td><td>sss<td>' . $i . '</td></tr>';
-                        }   
-                        ?>
-                        </table></div></div>
-                        <?php }?>
-
-
-                   <?php }  ?>
                 </div>
                    
-
-
-
                     
                 <div class="col-lg-4">
                 </div>
