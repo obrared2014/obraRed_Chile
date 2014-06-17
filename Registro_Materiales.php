@@ -11,7 +11,7 @@
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                         <div class="form-group">
-                            <select name="tipo_material" id="tipo_material" class="form-control">
+                            <select name="tipo_material" id="tipo_material" class="form-control" required="true">
                                 <option value="">Seleccione Tipo</option>
                                     <?php
                                     require_once("Materiales/funciones.php");
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                         <div class="form-group">
-                            <select name="material" id="material" class="form-control">
+                            <select name="material" id="material" class="form-control" required="true">
                                 <option value="" >Seleccione Material</option>
                                 
                             </select>
@@ -84,24 +84,33 @@
        var valor=document.getElementById('tipo_material').value;
        if(valor==='otro'){
            document.getElementById("tipo_otro").style.display="block";
+           document.getElementById("tipo_otro").required=true;
+           
            selecciona_material(valor);
        }else{
            document.getElementById("tipo_otro").style.display="none";
+           document.getElementById("tipo_material").required=true;
+//           document.getElementById("material").required="true"; 
            selecciona_material(valor);
        }
    }
 
    function selecciona_material(tipo_sel){
-//       var sel=document.getElementById('material').value;
-//       alert(sel);
+//       alert(tipo_sel);
        if(tipo_sel==='otro'){
+           document.getElementById("material").disabled=true;
            document.getElementById("material_otro").style.display="block";
-//           document.getElementById("material_otro").required="true";
-//           document.getElementById("material").required="false";
+           document.getElementById("material_otro").required=true;
+           document.getElementById("material").required=false;   
+           document.getElementById("tipo_material").required=false;
+//           alert(tipo_sel);
        }else{
+           document.getElementById("material").disabled=false;
+           document.getElementById("material_otro").required=false;
            document.getElementById("material_otro").style.display="none";
-//           document.getElementById("material_otro").required="false";
-//           document.getElementById("material").required="true";
+           document.getElementById("material").required=true;        
+           document.getElementById("tipo_material").required=true;
+//           alert(tipo_sel);
        }
    }
 </script>
