@@ -27,9 +27,12 @@
                 $largo = $_POST["largo"];
                 $ancho = $_POST["ancho"];
                 
+                $precio1 = $_POST["precio1"];
+                $precio2 = $_POST["precio2"];
+                $precio3 = $_POST["precio3"];                
                 
 
-                $insertar = mysql_query("call insertar_material('$tipo','$material','$descripcion_material','$alto','$ancho','$largo')");
+                $insertar = mysql_query("call insertar_material('$tipo','$material','$descripcion_material','$alto','$ancho','$largo','$precio1','$precio2','$precio3')");
                 if(!$insertar){
 
                       echo ' <script languaje="javascript">

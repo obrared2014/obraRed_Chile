@@ -70,6 +70,25 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="precio1" placeholder="Precio Referencial 1" required="true">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="precio2" placeholder="Precio Referencial 2">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="precio3" placeholder="Precio Referencial 3">
+                        </div>
+                    </div>
+                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">&nbsp;</div>
+                </div>                
+                <div class="row">
+                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
                         <div class="form-group">
                             <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar">
