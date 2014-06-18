@@ -117,7 +117,9 @@
    function selecciona_material(tipo_sel){
 //       alert(tipo_sel);
        if(tipo_sel==='otro'){
-           document.getElementById("material").disabled=true;
+           if(document.getElementById('tipo_material').value==="otro"){
+              document.getElementById("material").disabled=true; 
+           }           
            document.getElementById("material_otro").style.display="block";
            document.getElementById("material_otro").required=true;
            document.getElementById("material").required=false;   

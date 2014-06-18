@@ -59,6 +59,9 @@
                     break; 
                 case "Agrega_Materiales":
                     include 'Registro_Materiales.php';
+                    break;   
+                case "Cotizacion":
+                    include 'Cotizacion.php';
                     break;                   
             }
             include 'footer.php';
