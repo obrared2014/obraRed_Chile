@@ -25,9 +25,16 @@
             {
             if (isset($_POST['mat'])) 
             {
+                if(!(isset($_POST['ciudad'])))
+                    {
+                    $ciudad="stgo";
+                    }else
+                        {
+                             $ciudad=$_POST['ciudad'];
+                        }
+                
                 $material = $_POST['busq_mat'];
-                $comuna=$_POST['comuna'];
-                $ciudad=$_POST['ciudad'];
+                $comuna=$_POST['comuna'];               
         ?>
                 <div class="panel panel-primary"><div class="panel-heading">materiales</div><div class="table"><table class="table table-hover" >
                 <tr><th class="active">Nombre<th>Comuna<th>Ciudad<th>Fono</th><th>Stock</th></tr>
@@ -43,9 +50,15 @@
                 <?php
                 if (isset($_POST['emp'])) 
                     {
+                if(!(isset($_POST['ciudad'])))
+                    {
+                    $ciudad="stgo";
+                    }else
+                        {
+                             $ciudad=$_POST['ciudad'];
+                        }                    
                         $empresa = $_POST['empresa'];
-                        $comuna=$_POST['comuna'];
-                        $ciudad=$_POST['ciudad'];                        
+                        $comuna=$_POST['comuna'];                        
                 ?>
                         <div class="panel panel-primary"><div class="panel-heading">empresas</div><div class="table"><table class="table table-hover" >
                         <tr><th class="active">Nombre<th>Comuna<th>Ciudad<th>Fono</th><th>Stock</th></tr>

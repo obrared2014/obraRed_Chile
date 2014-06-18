@@ -21,7 +21,7 @@
             <span class="label label-default"> Prueba aqui &nbsp;&nbsp;</span>
         </h3>        
         <div class="panel panel-default panel-info">
-            <div class="panel-heading">Buscar Materiales</div> 
+            <div class="panel-heading">Busqueda Avanzada de Materiales</div> 
             <div class="panel-body">
                 <form class="navbar-form navbar-left" role="search" action="Index.php?sec=ResBuscar" method="post" >
                     <div class="form-group">
@@ -52,17 +52,17 @@
                     </div>                                
 
                     <div class="form-group">
-                        <input type="text" name="busq_mat" class="form-control" placeholder="Buscar">
+                        <input type="text" name="busq_mat" class="form-control" placeholder="Ingrese palabra Clave">
                     </div>                              
-                    <button type="submit" class="btn btn-info" name="mat">Buscar</button>
+                    <button type="submit" class="btn btn-primary" name="mat">Buscar</button>
                 </form>  
             </div>
         </div>
 
         <div class="panel panel-warning ">
-            <div class="panel-heading panel-success">Buscar Empresas</div> 
+            <div class="panel-heading panel-success">Busqueda Avanzada de Empresas</div> 
             <div class="panel-body">
-                <form class="navbar-form navbar-left" role="search" action="Index.php?sec=Buscar" method="post">
+                <form class="navbar-form navbar-left" role="search" action="Index.php?sec=ResBuscar" method="post">
                     <div class="form-group">
                         <select name="region" id="region" class="form-control" required="true">
                             <option value="" >Seleccione Region</option>
@@ -90,9 +90,9 @@
                         </select>
                     </div>                                 
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Buscar" name="empresa">
+                        <input type="text" class="form-control" placeholder="Ingrese Palabra Clave" name="empresa">
                     </div>                              
-                    <button type="submit" class="btn btn-warning" name="emp">Buscar</button>
+                    <button type="submit" class="btn btn-primary" name="emp">Buscar</button>
                 </form>  
             </div>
                   
