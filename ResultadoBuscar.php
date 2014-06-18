@@ -26,13 +26,15 @@
             if (isset($_POST['mat'])) 
             {
                 $material = $_POST['busq_mat'];
+                $comuna=$_POST['comuna'];
+                $ciudad=$_POST['ciudad'];
         ?>
                 <div class="panel panel-primary"><div class="panel-heading">materiales</div><div class="table"><table class="table table-hover" >
                 <tr><th class="active">Nombre<th>Comuna<th>Ciudad<th>Fono</th><th>Stock</th></tr>
                 <?php
                     for ($i = 0; $i < 13; $i++) 
                     {
-                        echo '<tr><td>' . $material . '</td><td>dss</td><td>ssss</td><td>sss<td>' . $i . '</td></tr>';
+                        echo '<tr><td>' . $material . '</td><td>'.$comuna.'</td><td>'.$ciudad.'</td><td>sss<td>' . $i . '</td></tr>';
                     }
                 ?>
                 </table></div></div>
@@ -42,13 +44,15 @@
                 if (isset($_POST['emp'])) 
                     {
                         $empresa = $_POST['empresa'];
+                        $comuna=$_POST['comuna'];
+                        $ciudad=$_POST['ciudad'];                        
                 ?>
                         <div class="panel panel-primary"><div class="panel-heading">empresas</div><div class="table"><table class="table table-hover" >
                         <tr><th class="active">Nombre<th>Comuna<th>Ciudad<th>Fono</th><th>Stock</th></tr>
                          <?php
                         for ($i = 0; $i < 13; $i++) 
                         {
-                                echo '<tr><td>' . $empresa . '</td><td>dss</td><td>ssss</td><td>sss<td>' . $i . '</td></tr>';
+                                echo '<tr><td>' . $empresa . '</td><td>'.$comuna.'</td><td>'.$ciudad.'</td><td>sss<td>' . $i . '</td></tr>';
                         }
                         ?>
                         </table></div></div>
