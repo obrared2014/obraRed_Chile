@@ -1,4 +1,4 @@
-<!--Carousel.php-->
+<!--Carousel.php -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!-- comienzo carousel -->
     <ol class="carousel-indicators"><!-- Indicadores -->
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
