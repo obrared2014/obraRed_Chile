@@ -1,4 +1,4 @@
-<!-- cotización -->
+<!-- Cotización -->
 <div style="overflow: auto;">
 <h4>Nos es grato entregarle la cotización para la construcci&oacute;n de un Cobertizo de 12 m2 con los materiales seleccionados</h4>
 <br/>
