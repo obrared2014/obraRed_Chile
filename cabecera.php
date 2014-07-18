@@ -13,9 +13,9 @@
                 <li class="dropdown">
                     <a href="?sec=Inicio" role="button" class="dropdown-toggle"><b class="glyphicon glyphicon-home"></b>&nbsp;Inicio</a>
                 </li>
-                <li class="dropdown" id="servicios_logout" style="display: block">
+<!--                <li class="dropdown" id="servicios_logout" style="display: block">
                     <a href="?sec=Servicios" role="button" class="dropdown-toggle">Servicios</a>
-                </li>
+                </li>-->
                 <li class="dropdown">
                     <a href="#" role="button" class="dropdown-toggle"  data-toggle="dropdown">Nuestra Empresa<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">

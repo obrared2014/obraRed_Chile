@@ -17,8 +17,8 @@
         <div class="item">
               <img src="img/img_carousel_002.jpg" alt="1">
               <div class="carousel-caption">
-                <h3>Levantar una contrucción</h3>
-                <p>con obraRed es mucho mas facil</p>
+                <h3>Levantar una construcción</h3>
+                <p>Con ObraRed es mucho más fácil</p>
             </div>
         </div>
         <div class="item">
@@ -30,7 +30,7 @@
         <div class="item">
             <img src="img/img_carousel_004.jpg" alt="3">
             <div class="carousel-caption">
-                <h3>Comienza a levantar tu obra mucho mas rapido</h3>
+                <h3>Comienza a levantar tu obra mucho más rápido</h3>
             </div>
         </div>
     </div><!--Fin slides -->
