@@ -11,11 +11,11 @@
     <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
         <h3>
             <p>
-                Se orienta a estar siempre a la vanguardia en del mercado en 
+                Nos orientamos a estar siempre a la vanguardia en del mercado en 
                 relación a qué tipo de materiales se están ocupando según su 
                 calidad y precio.
                 A partir de esa premisa, el objetivo es cumplir con las 
-                exigencias de una sociedad que avanza con construcciones más 
+                exigencias de una sociedad que avanza en construcciones más 
                 sofisticadas.
             </p>
         </h3>
