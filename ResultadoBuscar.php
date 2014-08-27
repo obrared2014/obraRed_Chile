@@ -75,6 +75,7 @@
                    
                     
                 <div class="col-lg-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3328.6872881248905!2d-70.7073413!3d-33.4574528!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c487b40e50d5%3A0x1502d8f8f6e07ae0!2sLiber+Bernardo+O&#39;Higgins+5345%2C+Lo+Prado%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses!2scl!4v1409176478363" width="600" height="500" frameborder="0" style="border:0"></iframe>
                 </div>
    
                 
